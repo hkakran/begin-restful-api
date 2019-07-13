@@ -3,6 +3,7 @@
 //
 // let begin = require('@architect/functions')
 let data = require('@begin/data')
+
 // HTTP function
 exports.handler = async function http(req) {
   console.log(req)
