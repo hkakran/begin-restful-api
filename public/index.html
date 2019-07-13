@@ -6,12 +6,9 @@
 </style>
 
 <form action=/api/cats method=post>
-  <input type=text name=name placeholder="cat name">
-  <select name=breed>
-    <option value=tabby>tabby</option>
-    <option value=black>black</option>
-  </select>
-  <button type=submit>save cat</button>
+  <input type=text name=url placeholder="link url">
+  <input type=text name=selector placeholder="unique css selector">
+  <button type=submit>save link</button>
 </form>
 
 <main>Loading cats...</main>
@@ -24,10 +21,10 @@ import cat from '/cat.js'
 let form = document.querySelector('form')
 form.onsubmit = async function submit(e) {
   e.preventDefault()
-  let name = form.querySelector('input').value
-  let breed = form.querySelector('select').value
+  let url = form.querySelector("input[name='url']").value
+  let selector = form.querySelector("input[name='selector']").value
   // create the cat
-  await cats.create({name, breed})
+  await cats.create({url, selector})
   // reset the list
   await main()
 }
