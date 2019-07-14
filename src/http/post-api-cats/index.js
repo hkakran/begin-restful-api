@@ -1,11 +1,11 @@
 let data = require('@begin/data')
 
 exports.handler = async function getCats(req) {
-  await data.set({table:'cats', ...req.body})
-  console.log(req)
+  let result = await data.set({table:'cats', ...req.body})
   if (isXHR(req.headers)) {
     return {
-      statusCode: 201
+      statusCode: 201,
+      body: JSON.stringify(result)
     }
   }
   else {
