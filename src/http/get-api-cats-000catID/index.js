@@ -36,7 +36,7 @@ exports.handler = async function http(req) {
   <html lang=en>
     <head>
       <meta charset=utf-8>
-      <title>Hi!</title>
+      <title>Hyperlink It</title>
       <meta http-equiv="Refresh" content="2; url=` + url + `" />
       <link rel="stylesheet" href="https://static.begin.app/starter/default.css">
       <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" rel="icon" type="image/x-icon" />
